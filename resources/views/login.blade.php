@@ -43,22 +43,31 @@
 
     <script>
         $(document).ready(function() {
+            // Set up CSRF token for AJAX requests
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
             $('#login-form').on('submit', function(e) {
                 e.preventDefault();
                 $('#error-message').hide();
                 $('#success-message').hide();
 
                 $.ajax({
-                    url: "{{ url('/') }}",
+                    url: "{{ route('login') }}",
                     type: 'POST',
                     data: $(this).serialize(),
                     success: function(response) {
-                        $('#success-message').text('Login successful! Redirecting to dashboard...').fadeIn().delay(2000).fadeOut(function() {
+                        $('#success-message').text('Login successful! Redirecting to dashboard...').fadeIn().delay(1000).fadeOut(function() {
                             window.location.href = "{{ route('dashboard') }}";
                         });
                     },
-                    error: function(response) {
-                        $('#error-message').text(response.responseJSON.message).fadeIn();
+                    error: function(xhr) {
+                        var errors = xhr.responseJSON.errors || {};
+                        var errorMessage = xhr.responseJSON.message || 'An error occurred. Please try again.';
+                        $('#error-message').html(Object.values(errors).flat().join('<br>') || errorMessage).fadeIn();
                     }
                 });
             });

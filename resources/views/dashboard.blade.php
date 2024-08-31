@@ -80,6 +80,7 @@
                 </div>
 
                 <!-- New Content Section -->
+                <!-- New Content Section -->
                 <div class="card mb-4">
                     <div class="card-header">
                         <h5>The New Way to Success</h5>
@@ -89,6 +90,62 @@
                         <p>Transforming Education, One Innovative Solution at a Time. At SR Edu Tech, we're dedicated to redefining learning experiences, fostering creativity, and preparing learners for a brighter, more connected future. With cutting-edge technology and a passion for education, we're shaping the leaders of tomorrow.</p>
                     </div>
                 </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Who We Are</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>SR EDU TECH, founded in 2005 by Mrs. Sujatha Reddy, is a dynamic educational company committed to enhancing students' skills and providing tech support for school management. Recognizing the limitations of traditional education, Mrs. Sujatha Reddy, a teacher herself, introduced knowledge-based courses like Abacus, Vedic/Speed Math, Spoken English, Robotics, and AI to empower students in today's competitive world.</p>
+                        <p>Operating across India, SR Edu Tech has reached over 1450 schools, spanning the entire country from East to West, North to South. Their impactful courses have garnered praise from school management, faculty, students, and parents, fostering overall student development and readiness for the challenges of the real world.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Our Vision</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>At SR EDU TECH, our vision is to lead an educational revolution, transcending boundaries to provide innovative, knowledge-based courses that empower students worldwide. We're dedicated to erasing limitations in traditional education, enabling all students, regardless of their background or location, to access personalized learning experiences. Our aim is to equip students with essential skills and instill a passion for lifelong learning, preparing them to excel in an increasingly competitive and dynamic world. Through relentless innovation and unwavering integrity, we are committed to reshaping the future of education for the better.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Our Mission</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Empowering Learners: Equipping students with essential knowledge and skills to excel in a competitive global landscape.</li>
+                            <li>Enabling Educators: Offering cutting-edge tech support and resources for educators and school management.</li>
+                            <li>Driving Innovation: Continuously pioneering new educational approaches and technologies.</li>
+                            <li>Access for All: Expanding access to quality education across the length and breadth of India.</li>
+                            <li>Community Building: Fostering a collaborative educational community that includes schools, teachers, students, and parents.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Our Values</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>At SR EDU TECH, our values are the foundation of everything we do. We cherish innovation, continuously pushing boundaries in educational technology. We are passionate about inclusivity, ensuring that quality education is accessible to all. Empowerment drives us, as we equip students and educators to unlock their full potential. We uphold unwavering integrity in all our endeavors and believe in the power of continuous improvement. We celebrate diversity, fostering collaboration among all stakeholders, and build a vibrant community where learning thrives. These values guide our mission to reshape education positively.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Our Ethics</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>At SR EDU TECH, we hold our ethical principles in the highest regard, as they define the essence of our organization. Integrity is the cornerstone of our operations, with a commitment to transparent, honest, and ethical conduct permeating all aspects of our work. We prioritize the welfare of our students, educators, and partners, ensuring their well-being through fair and equitable treatment. Respect for privacy and data security is paramount; we uphold stringent standards to safeguard personal information and create a secure learning environment. We are unwavering in our dedication to regulatory compliance and best practices, fostering responsible business conduct. Our ethical compass guides us in providing accessible, valuable, and innovative educational solutions. We recognize the importance of promoting diversity, inclusivity, and collaboration in our educational community.</p>
+                    </div>
+                </div>
+                <!-- End of Content Section -->
+            </div>
+        </div>
+    </div>
 
                 <!-- Other Content Sections -->
 

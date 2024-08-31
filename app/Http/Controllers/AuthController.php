@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -27,24 +28,27 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Registration successful! Please log in.');
     }
 
-    // Login
     public function login(Request $request)
     {
+        // Validate the request data
         $request->validate([
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
+        $credentials = $request->only('email', 'password');
+
+        // Attempt to log in the user
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('dashboard');
+
+            // Return JSON response indicating successful login
+            return response()->json(['message' => 'Login successful!'], 200);
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
+        // Return JSON response indicating invalid credentials
+        return response()->json(['message' => 'The provided credentials do not match our records.'], 422);
     }
-
     // Fetch User Data
     public function fetchUserData()
     {

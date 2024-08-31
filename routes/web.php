@@ -9,14 +9,14 @@ Route::get('/', function () {
 })->name('login');
 
 // Route for handling the login form submission
-Route::post('/', [AuthController::class, 'login']);
+Route::post('/', [AuthController::class, 'login'])->name('login.submit');
 
 // Registration routes
 Route::get('register', function () {
     return view('register');
 })->name('register');
 
-Route::post('register', [AuthController::class, 'register']);
+Route::post('register', [AuthController::class, 'register'])->name('register.submit');
 
 // Dashboard route
 Route::get('dashboard', [AuthController::class, 'fetchUserData'])->name('dashboard')->middleware('auth');
