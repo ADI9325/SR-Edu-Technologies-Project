@@ -16,6 +16,7 @@
                         <h4>Welcome, {{ $user->name }}</h4>
                     </div>
                     <div class="card-body text-center">
+                        <div id="logout-message" class="alert alert-success" style="display: none;"></div>
                         <p>Email: {{ $user->email }}</p>
                         <button id="logout-button" class="btn btn-danger btn-block">Logout</button>
                     </div>
@@ -34,8 +35,9 @@
                         _token: '{{ csrf_token() }}'
                     },
                     success: function(response) {
-                        alert('Logged out successfully!');
-                        window.location.href = "{{ route('login') }}";
+                        $('#logout-message').text('Logged out successfully! Redirecting to login...').fadeIn().delay(2000).fadeOut(function() {
+                            window.location.href = "{{ route('login') }}";
+                        });
                     },
                     error: function(response) {
                         alert('Error logging out!');

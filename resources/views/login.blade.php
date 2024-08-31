@@ -17,6 +17,7 @@
                     </div>
                     <div class="card-body">
                         <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+                        <div id="success-message" class="alert alert-success" style="display: none;"></div>
                         <form id="login-form">
                             @csrf
                             <div class="form-group">
@@ -43,17 +44,19 @@
             $('#login-form').on('submit', function(e) {
                 e.preventDefault();
                 $('#error-message').hide();
+                $('#success-message').hide();
 
                 $.ajax({
                     url: "{{ url('/') }}",
                     type: 'POST',
                     data: $(this).serialize(),
                     success: function(response) {
-                        alert('Login successful!');
-                        window.location.href = "{{ route('dashboard') }}";
+                        $('#success-message').text('Login successful! Redirecting to dashboard...').fadeIn().delay(2000).fadeOut(function() {
+                            window.location.href = "{{ route('dashboard') }}";
+                        });
                     },
                     error: function(response) {
-                        $('#error-message').text(response.responseJSON.message).show();
+                        $('#error-message').text(response.responseJSON.message).fadeIn();
                     }
                 });
             });
